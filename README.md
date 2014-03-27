@@ -1,19 +1,14 @@
-BSBL-FM {#bsbl_fm}
-=====================
-[TOC]
+# BSBL-FM #
 
-This is a fast implementation of the Block Sparse Bayesian Learning **(BSBL)** algorithm[^bsbl]. The developed algorith is based 
-on the Fast Marginalized **(FM)** likelihood maximization algorithm, which yields ~8 times speedup while also pertains nearly 
-the same recovery performances.
+This is a fast implementation of the Block Sparse Bayesian Learning [BSBL](https://sites.google.com/site/researchbyzhang/) algorithm. The developed algorith is based on the Fast Marginalized **(FM)** likelihood maximization algorithm, which yields ~8 times speedup while also pertains nearly the same recovery performances.
 
-A Short Introduction
-----------
+# A Short Introduction #
 
 A CS algorithm aims to solve:
 $$
 \mathbf{Y} = \mathbf{\Phi} \mathbf{X} + \mathbf{N}
 $$
-where $\mathbf{Y}\in\mathbb{R}^{M\times T}$ is the measurement vector, $\mathbf{\Phi}\in\mathbb{R}^{M\times N}$ is the sensing matrix, $\mathbf{X}\in\mathbb{R}^{N\times T}$ is the signal. 
+where $\mathbf{Y}\in\mathbb{R}^{M\times T}$ is the measurement vector, $\mathbf{\Phi}\in\mathbb{R}^{M\times N}$ is the sensing matrix, $\mathbf{X}\in\mathbb{R}^{N\times T}$ is the signal.
 
 Compressed sensing, can recover $\mathbf{X}$ given $\mathbf{Y}$ and an under-determined matrix $\mathbf{\Phi}$. When $T=1$, we called it Single Measurement Vector **(SMV)** model, with $T>1$, it is Multiple Measurement Vector **(MMV)** model.
 
@@ -34,8 +29,7 @@ Our **BSBL-FM** algorithm, is an ultra fast implementation of the original BSBL 
 
 See the demos and implementations below for more details.
 
-Codes and Data
----------
+# Codes and Data #
 
 The `.m` codes are:
 
@@ -56,8 +50,7 @@ The `.mat` data files are:
 > - **signal_01.mat**:  FECG datasets used in BSBL-BO by Zhilin
 > - **Phi.mat**:  the sensing matrix for CS FECG data
 
-<i class="icon-refresh"></i> Citations
---------
+# Citations #
 
 If you find the **BSBL-FM** algorithm useful, please cite:
 
@@ -104,6 +97,4 @@ Telemonitoring and Brain-Computer Interfaces},
     Year = {2014}
 }
 ```
-
-  [^bsbl]: [BSBL](https://sites.google.com/site/researchbyzhang/) is an advance compressed sensing **(CS)** algorithm developed by Dr. Zhilin Zhang at UCSD. It is capable of recovering near-sparse or even non-sparse signals with high fidelity.
 
