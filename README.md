@@ -4,19 +4,11 @@ This is a fast implementation of the Block Sparse Bayesian Learning [BSBL](https
 
 # A Short Introduction #
 
-A CS algorithm aims to solve:
-$$
-\mathbf{Y} = \mathbf{\Phi} \mathbf{X} + \mathbf{N}
-$$
-where $\mathbf{Y}\in\mathbb{R}^{M\times T}$ is the measurement vector, $\mathbf{\Phi}\in\mathbb{R}^{M\times N}$ is the sensing matrix, $\mathbf{X}\in\mathbb{R}^{N\times T}$ is the signal.
+A CS algorithm aims to solve, **Y** = **Phi** **X** + **N**, where **Y** is the measurement matrix of size M times T, **Phi** is the under-determined sensing matrix of size M times N, **X** is the signal.
 
-Compressed sensing, can recover $\mathbf{X}$ given $\mathbf{Y}$ and an under-determined matrix $\mathbf{\Phi}$. When $T=1$, we called it Single Measurement Vector **(SMV)** model, with $T>1$, it is Multiple Measurement Vector **(MMV)** model.
+Compressed sensing, can recover **X** given **Y** and the under-determined matrix **Phi**. When **T=1**, we called it Single Measurement Vector (**SMV**) Model, with **T>1**, it is the Multiple Measurement Vector (**MMV**) model.
 
-Block Sparse, assumes that $\mathbf{x}$ can be partitioned into blocks $\mathbf{x} = \{ \mathbf{x}_1, \cdots, \mathbf{x}_g\}$. The non-zero entries cluster within some blocks and *zeros* otherwise. If $d$ out of $g$ blocks are non-zero, then the block sparsity is,
-$$
-\rho = \frac{d}{g}
-$$
-Exploiting the block sparse and the intra-block correlation is the source of the magic of all BSBL algorithms.
+Block Sparse, assumes that **x** can be partitioned into blocks **x** = {**x_1**, ... , **x_g**}. The non-zero entries cluster within some blocks and *zeros* otherwise. If *d* out of *g* blocks are non-zero, then the block sparsity is defined as *d/g*. Exploiting both the block sparsity and the intra-block correlation is the source of the magic of all BSBL algorithms.
 
 Our **BSBL-FM** algorithm, is an ultra fast implementation of the original BSBL framework, which brings about **~8** times speedup. What's more, It can worked in all the scenarios include:
 
