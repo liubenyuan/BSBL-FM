@@ -1,12 +1,10 @@
-BSBL-FM	{#bsbl_fm}
+BSBL-FM {#bsbl_fm}
 =====================
 [TOC]
 
 This is a fast implementation of the Block Sparse Bayesian Learning **(BSBL)** algorithm[^bsbl]. The developed algorith is based 
 on the Fast Marginalized **(FM)** likelihood maximization algorithm, which yields ~8 times speedup while also pertains nearly 
 the same recovery performances.
-
-----------
 
 A short introduction
 ----------
@@ -41,8 +39,6 @@ What's more, It can worked in all the scenarios include:
 
 See the demos and implementations below for more details.
 
-----------
-
 Codes and Data
 ---------
 
@@ -64,8 +60,6 @@ The `.mat` data files are:
 > - **demo.mat**: the data for SMV case, contains re, im vectors
 > - **signal_01.mat**:  FECG datasets used in BSBL-BO by Zhilin
 > - **Phi.mat**:  the sensing matrix for CS FECG data
-
--------
 
 <i class="icon-refresh"></i> Citations
 --------
@@ -112,10 +106,10 @@ More powerful **STSBL** algorithm developed by Zhilin Zhang is available at:
 Telemonitoring and Brain-Computer Interfaces},
     Author = {Zhilin Zhang and Tzyy-Ping Jung and Scott Makeig and Bhaskar D. Rao and Zhouyue Pi},
     Journal = {(Accepted) IEEE Trans. on Neural Systems and Rehabilitation Engineering},
-    Year = {2014},
+    Year = {2014}
+}
 ```
 
-  
   [^bsbl]: [BSBL](https://sites.google.com/site/researchbyzhang/) is an advance compressed sensing **(CS)** algorithm developed 
 by Dr. Zhilin Zhang at UCSD. It is capable of recovering near-sparse or even non-sparse signals with high fidelity.
 
