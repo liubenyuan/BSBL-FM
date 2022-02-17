@@ -2,6 +2,9 @@
 
 This is a fast implementation of the Block Sparse Bayesian Learning [BSBL](https://sites.google.com/site/researchbyzhang/) algorithm. The developed algorith is based on the Fast Marginalized **(FM)** likelihood maximization algorithm, which yields ~8 times speedup while also pertains nearly the same recovery performances.
 
+A Python version of BSBL algorithms is also available:
+[pyBSBL](https://github.com/liubenyuan/pyBSBL)
+
 # A Short Introduction #
 
 A CS algorithm aims to solve, **Y** = **Phi** **X** + **N**, where **Y** is the measurement matrix of size M times T, **Phi** is the under-determined sensing matrix of size M times N, **X** is the signal.
